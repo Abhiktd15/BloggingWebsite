@@ -1,0 +1,40 @@
+/* Editor Container */
+.content {
+    margin: 20px 0; /* Increased vertical margin */
+  }
+  
+  /* Quill Editor */
+  .ql-editor {
+    min-height: 200px;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+  }
+  
+  /* Quill Toolbar */
+  .ql-toolbar {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 8px 0;
+    background-color: #f9f9f9;
+  }
+  
+  /* Quill Toolbar Icons */
+  .ql-toolbar button {
+    color: #555;
+    font-size: 16px;
+    padding: 5px 10px;
+    margin: 0 2px;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  /* Quill Toolbar Icons on hover */
+  .ql-toolbar button:hover {
+    background-color: #ddd;
+  }
+  
