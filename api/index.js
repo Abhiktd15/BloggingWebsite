@@ -107,12 +107,15 @@ app.put('/post',uploadMiddleware.single('file'), async (req,res) => {
         if (!isAuthor) {
         return res.status(400).json('you are not the author');
         }
-        await postDoc.update({
-        title,
-        summary,
-        content,
-        cover: newPath ? newPath : postDoc.cover,
-        });
+         // Update fields
+            postDoc.title = title;
+            postDoc.summary = summary;
+            postDoc.content = content;
+            if (newPath) {
+                postDoc.cover = newPath;
+            }
+
+            await postDoc.save(); // Save the changes
 
         res.json(postDoc);
     });
