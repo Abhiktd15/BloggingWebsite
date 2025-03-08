@@ -26,18 +26,20 @@ export default function Header() {
 
   return (
     <header>
-      <Link to="/" className="logo">MyBlog</Link>
+      <Link style={{fontFamily:"cursive"}} to="/" className="logo">
+        Blogger
+      </Link>
       <nav>
         {username && (
           <>
-            <Link to="/create">Create new post</Link>
-            <a onClick={logout}>Logout ({username})</a>
+            <Link className="button" to="/create">Create new post</Link>
+            <a className="button" onClick={logout}>Logout ({username})</a>
           </>
         )}
         {!username && (
           <>
-            <Link to="/login">Login</Link>
-            <Link to="/register">Register</Link>
+            <Link className="button" to="/login">Login</Link>
+            <Link className="button" to="/register">Register</Link>
           </>
         )}
       </nav>

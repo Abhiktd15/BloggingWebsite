@@ -17,17 +17,27 @@ export default function RegisterPage() {
     }
   }
   return (
-    <form className="register" onSubmit={register}>
-      <h1>Register</h1>
-      <input type="text"
-          placeholder="username"
+    <div className="login-container">
+      <form className="login" onSubmit={register}>
+        <h1>Register</h1>
+        <label>Username</label>
+        <input
+          type="text"
+          placeholder="Username"
           value={username}
-          onChange={ev => setUsername(ev.target.value)}/>
-      <input type="password"
-          placeholder="password"
+          onChange={(ev) => setUsername(ev.target.value)}
+        />
+
+        <label>Password</label>
+        <input
+          type="password"
+          placeholder="Password"
           value={password}
-          onChange={ev => setPassword(ev.target.value)}/>
-      <button>Register</button>
-    </form>
+          onChange={(ev) => setPassword(ev.target.value)}
+        />
+
+        <button type="submit">Register</button>
+      </form>
+    </div>
   );
 }

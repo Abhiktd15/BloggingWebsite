@@ -14,11 +14,13 @@ main{
   padding: 10px;
   max-width: 960px;
   margin: 0 auto;
+  overflow:hidden;
+  drop-shadow:20px;
 }
 header{
   display:flex;
   justify-content:space-between;
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 50px;
   align-items: center;
 }
@@ -33,13 +35,28 @@ header a.logo{
 header nav{
   display:flex;
   gap: 24px;
+  
+}
+header .button{
+  display:flex;
+  background-color: black;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  
+}
+header .button:hover{
+  background-color: #555555;
 }
 
 div.post{
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: 0px;
   margin: 30px;
+  padding-bottom:30px;
+  border-bottom: 2px dashed #888;
 }
 @media screen and (min-width: 700px) {
   div.post{
@@ -47,16 +64,15 @@ div.post{
   }
 }
 div.post div.image{
-  max-height:300px;
   display: flex;
-  
   overflow:hidden;
 }
 div.post div.image img{
   object-fit: cover;
   object-position: center center;
-  width: 100%;
-  border-radius:30px;
+  height:220px;
+  width: 350px;
+  border-radius:15px;
 }
 div.post div.texts {
   margin:10px;
@@ -64,8 +80,12 @@ div.post div.texts {
 
 div.post div.texts h2{
   margin:0px;
+  margin-bottom:10px;
   text-align:justify;
-  font-size: 1.2rem;
+  line-height:28px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: cursive;
 }
 div.post div.texts a{
   text-decoration:none;
@@ -77,14 +97,18 @@ div.post p.info{
   font-size:1rem;
   font-weight: bold;
   display: flex;
+  flex-direction:column;
   gap: 10px;
 }
 div.post p.info a.author{
   color:#333;
 }
 div.post p.summary{
-  margin:10px 0;
-  line-height: 1.8rem;
+  margin:0;
+  color:#888;
+  font-weight:semibold;
+  font-family: cursive,sans-serif;
+  line-height: 1em;
 }
 
 form.login, form.register{
@@ -113,12 +137,26 @@ button{
 form.login h1, form.register h1{
   text-align: center;
 }
+div.post-page{
+  margin: 30px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 div.post-page div.image{
   max-height:full;
   display: flex;
-  
   overflow:hidden;
+}
+div.post-page div.detail{
+  max-width:400px;
+  display:flex;
+  flex-direction: row;
+  gap:20px;
+  align-items: center;
+  justify-content: center;
+  margin:30px;
 }
 div.post-page div.image img{
   object-fit: cover;
@@ -133,6 +171,7 @@ div.post-page a{
 div.post-page h1{
   text-align: center;
   margin: 10px 0 5px;
+  font-family: cursive;
   line-height: 40px;
 }
 div.post-page time{
@@ -151,9 +190,28 @@ div.post-page div.author{
 div.content p{
   line-height: 1.7rem;
   margin: 30px 0;
+  font-size: 1.1rem;
+  font-family: sans-serif;
+}
+div.content h1{
+  margin: 10px 0 5px;
+  font-family: cursive;
+  line-height: 40px;
+}
+div.content h2{
+  margin: 10px 0 5px;
+  font-family: cursive;
+  line-height: 40px;
 }
 div.content li{
   margin-bottom: 12px;
+}
+div.content img{  
+  max-width: 90%;
+  height: 50%;
+  border-radius:20px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 div.edit-row{
   text-align: center;
@@ -172,4 +230,63 @@ div.post-page a.edit-btn{
 
 a svg{
   height:20px;
+}
+
+
+/* Center the login form */
+.login-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Login form styles */
+.login {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 550px;
+  text-align: center;
+}
+
+/* Form headings */
+.login h1 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Labels */
+.login label {
+  display: block;
+  font-weight: bold;
+  text-align: left;
+  margin: 10px 0 5px;
+  color: #444;
+}
+
+/* Input fields */
+.login input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Button styles */
+.login button {
+  width: 100%;
+  padding: 10px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login button:hover {
+  background: #5a67d8;
 }
