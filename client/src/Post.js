@@ -9,7 +9,7 @@ const Post = memo(({ _id, title, summary, cover, content, createdAt, author }) =
     <div className="post">
       <div className="image">
         <Link to={`/post/${_id}`}>
-          <img src={`http://localhost:4000/${cover}`} alt={title || "Post Image"} loading="lazy" />
+          <img src={`https://bloggingwebsite-crgl.onrender.com/${cover}`} alt={title || "Post Image"} loading="lazy" />
         </Link>
       </div>
       <div className="texts">

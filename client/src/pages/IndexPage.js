@@ -6,7 +6,7 @@ export default function IndexPage() {
   const [isLoading,setIsLoading] = useState(false);
   useEffect(() => {
     setIsLoading(true)
-    fetch('http://localhost:4000/post').then(response => {
+    fetch('https://bloggingwebsite-crgl.onrender.com/post').then(response => {
       response.json().then(posts => {
         setPosts(posts);
         setIsLoading(false)
